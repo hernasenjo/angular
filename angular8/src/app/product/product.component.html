@@ -3,7 +3,7 @@
     <div class="card" style="width: 18rem;">
       <img [src]="product.image" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ product.title | uppercase }}</h5>
+        <h5 class="card-title">{{ product.title | uppercase | reverse}}</h5>
         <h5>Precio: {{ product.price | currency:'€'}}</h5>
         <p class="card-text">{{ product.text | slice:0:45 }}</p>
         <p class="card-text">{{ today | date }}</p>
