@@ -11,18 +11,21 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [
     {
+      id: 1,
       title: "Producto 1",
       image: "assets/img/camiseta.jpg",
       price: 20,
       text: "Buen producto",
     },
     {
+      id: 2,
       title: "Producto 2",
       image: "assets/img/camiseta.jpg",
       price: 15,
       text: "Buen producto 2",
     },
     {
+      id: 3,
       title: "Producto 3",
       image: "assets/img/camiseta.jpg",
       price: 25,
@@ -33,6 +36,10 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClickedProduct(id: number) {
+    console.log('clicked', id);
   }
 
 }
