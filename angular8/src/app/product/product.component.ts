@@ -10,6 +10,8 @@ export class ProductComponent {
     @Input() product: Product;
     @Output() clickedProduct = new EventEmitter<number>();
 
+    today = new Date();
+
     viewDetail() {
         console.log('viewDetail', this.product.id);
         this.clickedProduct.emit(this.product.id);

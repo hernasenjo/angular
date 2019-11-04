@@ -15,14 +15,14 @@ export class ProductListComponent implements OnInit {
       title: "Producto 1",
       image: "assets/img/camiseta.jpg",
       price: 20,
-      text: "Buen producto",
+      text: "Buen producto 1",
     },
     {
       id: 2,
       title: "Producto 2",
       image: "assets/img/camiseta.jpg",
       price: 15,
-      text: "Buen producto 2",
+      text: "Un producto muy largo para probar el pipe slice",
     },
     {
       id: 3,
