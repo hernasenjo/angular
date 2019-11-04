@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Product } from "./../models/product.model";
 
 @Component({
@@ -7,11 +7,5 @@ import { Product } from "./../models/product.model";
 })
 
 export class ProductComponent {
-
-    product: Product = {
-        title: "Producto 1",
-        image: "",
-        price: 20,
-        text: "Buen producto"
-    }
-}
+    @Input() product: Product;
+} 

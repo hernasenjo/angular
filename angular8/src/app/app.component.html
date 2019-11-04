@@ -9,8 +9,9 @@
 </head>
 
 <body>
-  <app-product></app-product>
-  <button type="button" class="btn btn-primary">Primary</button>
-</body>
 
+  <!-- Iteramos product del array products recogiendo @input product -->
+  <app-product [product]="product" *ngFor="let product of products"></app-product>
+  
+</body>
 </html>
