@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FibonacciComponent } from 'src/app/pipes/fibonacci/fibonacci.component';
 
 @Component({
   selector: 'app-list',

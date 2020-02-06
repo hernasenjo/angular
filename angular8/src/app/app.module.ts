@@ -7,7 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ReversePipe } from './reverse.pipe';
 import { ListComponent } from './components/list/list.component';
-import { FibonacciPipe } from './pipes/fibonacci.pipe';
+import { FibonacciPipe } from './pipes/fibonacci/fibonacci.pipe';
 
 @NgModule({
   declarations: [
