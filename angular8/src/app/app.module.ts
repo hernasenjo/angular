@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ReversePipe } from './reverse.pipe';
 import { ListComponent } from './components/list/list.component';
 import { FibonacciPipe } from './pipes/fibonacci/fibonacci.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FibonacciPipe } from './pipes/fibonacci/fibonacci.pipe';
     ProductListComponent,
     ReversePipe,
     ListComponent,
-    FibonacciPipe
+    FibonacciPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
