@@ -1,6 +1,7 @@
   <!-- Iteramos product del array products recogiendo @input product y acción del botón con un @output -->
-  <app-product 
-  [product]="product" 
-  (clickedProduct)="onClickedProduct($event)" 
-  *ngFor="let product of products">
-  </app-product>
+  <section>
+    <div class="container">
+      <app-product [product]="product" (clickedProduct)="onClickedProduct($event)" *ngFor="let product of products">
+      </app-product>
+    </div>
+  </section>
