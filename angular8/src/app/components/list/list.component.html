@@ -1,7 +1,9 @@
-<input type="text" [(ngModel)]="name" (keydown.enter)="addUser()">
+<h3>Transforma tu nombre en la secuencia Fibonacci</h3>
+<input type="text" [(ngModel)]="name" placeholder="Escribe tu nombre" (keydown.enter)="addUser()">
 
 <ul>
-    <li *ngFor="let user of users">
-        {{ user.name }} {{ user.number | fibonacci }}
-    </li>
+  <li *ngFor="let user of users">
+    {{ user.name }} {{ user.number | fibonacci }}
+  </li>
 </ul>
+<br />

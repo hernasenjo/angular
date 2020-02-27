@@ -7,22 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  name: string;
+  public name: string;
+  public number: number;
 
-  users = [
-    {
-      name: 'Goku',
-      number: 10
-    },
-    {
-      name: 'Vegeta',
-      number: 42
-    },
-    {
-      name: 'Picolo',
-      number: 26
-    }
-  ];
+  users = [];
 
   constructor() { }
 
@@ -30,10 +18,16 @@ export class ListComponent implements OnInit {
   }
 
   addUser() {
+    this.countName(this.name);
     this.users.push({
       name: this.name,
-      number: 5,
+      number: this.number,
     });
     this.name = '';
+  }
+
+  countName(name: string) {
+    let characters = name.length;
+    this.number = characters;
   }
 }
