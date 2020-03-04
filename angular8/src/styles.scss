@@ -1,4 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
-img {
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  word-wrap: break-word;
+  border-radius: .25rem;
+}
+
+.card img,
+.card .card-body {
+  transition: all .5s ease-in-out;
+}
+
+.card:hover img,
+.card:hover .card-body {
+  filter: opacity(.5);
+  transition: all .5s ease-in-out;
+}
+
+.img-card {
   max-width: 100%;
+  position: relative;
+}
+
+.card-title {
+	padding: 5%;
+	margin-bottom: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.card-title .button-card {
+  position: absolute;
+  display: none;
+  z-index: 9000;
+}
+
+.card:hover .card-title .button-card {
+  display: inline-block;
+}
+
+.card-body .button-card {
+  display: none;
+}
+
+.card-body {
+    padding: 10% 5% 5% 5%;
+}
+
+
+
+@media (max-width: 1024px) {
+  .card-body .button-card {
+    display: inline-block;
+  }
+
+  .card-title .button-card {
+    display: none !important;
+  }
 }

@@ -31,6 +31,13 @@ export class ProductListComponent implements OnInit {
       price: 25,
       text: "Buen producto 3",
     },
+    {
+      id: 4,
+      title: "Producto 4",
+      image: "assets/img/logo.png",
+      price: 25,
+      text: "Buen producto 4",
+    },
   ];
 
   constructor() { }

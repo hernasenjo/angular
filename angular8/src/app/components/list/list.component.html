@@ -1,14 +1,24 @@
 <section>
   <div class="container">
-    <div class="col-md-12">
-      <h3>Transforma tu nombre en la secuencia Fibonacci</h3>
-      <input class="form-control" type="text" [(ngModel)]="name" placeholder="Escribe tu nombre"
-        (keydown.enter)="addUser()">
-    </div>
-    <li *ngFor="let user of users">
-      <div class="col-md-3">
-        <span appHighlight>{{ user.name }} </span>{{ user.number | fibonacci }}
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Transforma tu nombre en la secuencia Fibonacci</h3>
+        <input class="form-control" type="text" [(ngModel)]="name" placeholder="Escribe tu nombre"
+          (keydown.enter)="addUser()">
       </div>
-    </li>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <ul class="list-group" appHighlight>
+        <div *ngFor="let user of users" class="col-lg-4">
+          <li class="list-group-item">
+            <h3>{{ user.name }} = {{ user.number | fibonacci }}</h3>
+          </li>
+        </div>
+      </ul>
+    </div>
   </div>
 </section>
