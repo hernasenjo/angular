@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { User } from './../models/user.model';
 
 @Injectable({
@@ -7,22 +7,26 @@ import { User } from './../models/user.model';
 })
 export class UsersService {
   users: User[] = [];
-  constructor() { }
+
+  constructor(
+    private http: HttpClient
+  ) { }
 
   getAllUsers() {
     if (navigator.onLine) {
-
-      return this.users;
+      console.log("online");
+      return this.http.get('https://randomuser.me/api/?results=10');
     } else {
-      this.users = JSON.parse(localStorage.getItem("users"));
-      return this.users;
+      console.log("offline");
+      return JSON.parse(localStorage.getItem("users"));
     }
   }
 
   createUser(user: any) {
     if (navigator.onLine) {
-
+      console.log("online");
     } else {
+      console.log("offline");
       this.users.push(user);
     }
   }

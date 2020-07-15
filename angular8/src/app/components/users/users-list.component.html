@@ -2,12 +2,14 @@
   <div class="container">
     <table id="customers">
       <tr>
-        <th>Nombre</th>
-        <th>Edad</th>
+        <th>Email</th>
+        <th>Genero</th>
+        <th>Imagen</th>
       </tr>
       <tr *ngFor="let user of users">
-        <td>{{ user.name }}</td>
-        <td>{{ user.age }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.gender }}</td>
+        <td><img [src]="user.picture.thumbnail" alt=""></td>
       </tr>
     </table>
   </div>

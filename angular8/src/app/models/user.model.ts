@@ -1,6 +1,9 @@
 export interface User {
-  name: string;
-  age: number;
-  isSingle: boolean;
-  avatar: string;
+  email: string;
+  gender: string;
+  picture: {
+    large: string;
+    medium: string;
+    thumbnail: string;
+  };
 }

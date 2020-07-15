@@ -11,11 +11,14 @@ export class UsersListComponent implements OnInit {
   users: User[] = [];
 
   constructor(
-    private UsersService: UsersService
+    private usersService: UsersService
   ) { }
 
   ngOnInit() {
-    this.users = this.UsersService.getAllUsers();
+    this.usersService.getAllUsers().subscribe(data => {
+      console.log(data.results);
+      this.users = data.results;
+    });
   }
 
 }
