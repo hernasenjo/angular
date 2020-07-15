@@ -1,0 +1,14 @@
+<section>
+  <div class="container">
+    <table id="customers">
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+      </tr>
+    </table>
+  </div>
+</section>
