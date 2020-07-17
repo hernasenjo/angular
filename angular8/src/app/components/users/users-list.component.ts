@@ -33,6 +33,7 @@ export class UsersListComponent implements OnInit {
 
   loadUser() {
     if (navigator.onLine) {
+      localStorage.removeItem('users');
       console.log("online");
       this.usersService.getAllUsers().subscribe(data => {
         console.log(data['results']);
