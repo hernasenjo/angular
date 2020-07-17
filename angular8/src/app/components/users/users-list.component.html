@@ -1,9 +1,36 @@
 <section>
   <div class="container">
+    <h3>Control de usuarios online y offline</h3>
+    <form [formGroup]="formUser" (ngSubmit)="onSubmit()">
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <input class="form-control" type="email" placeholder="Email" formControlName="email" required>
+        </div>
+
+        <div class="form-group col-md-4">
+          <select class="form-control" formControlName="gender">
+            <option value="" disabled>Sexo</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-3">
+          <input class="form-control" type="text" placeholder="Imagen" formControlName="picture">
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">Add User</button>
+        </div>
+      </div>
+
+    </form>
+
     <table id="customers">
       <tr>
         <th>Email</th>
-        <th>Genero</th>
+        <th>Sexo</th>
         <th>Imagen</th>
       </tr>
       <tr *ngFor="let user of users">

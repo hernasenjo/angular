@@ -6,28 +6,16 @@ import { User } from './../models/user.model';
   providedIn: 'root'
 })
 export class UsersService {
-  users: User[] = [];
 
   constructor(
     private http: HttpClient
   ) { }
 
   getAllUsers() {
-    if (navigator.onLine) {
-      console.log("online");
-      return this.http.get('https://randomuser.me/api/?results=10');
-    } else {
-      console.log("offline");
-      return JSON.parse(localStorage.getItem("users"));
-    }
+    return this.http.get('https://randomuser.me/api/?results=10');
   }
 
   createUser(user: any) {
-    if (navigator.onLine) {
-      console.log("online");
-    } else {
-      console.log("offline");
-      this.users.push(user);
-    }
+    console.log("ok");
   }
 }
