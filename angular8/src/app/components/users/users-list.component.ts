@@ -47,6 +47,30 @@ export class UsersListComponent implements OnInit {
     }
   }
 
+  editUser(user: any) {
+    if (navigator.onLine) {
+      this.usersService.updateUser(user);
+    } else {
+      this.users.forEach((us) => {
+        if (us.email == user.email) {
+          us == user;
+        }
+      });
+    }
+  }
+
+  deleteUser(user: any) {
+    if (navigator.onLine) {
+      this.usersService.deleteUser(user);
+    } else {
+      this.users.forEach((us, i) => {
+        if (us.email == user.email) {
+          this.users.splice(i, 1);
+        }
+      });
+    }
+  }
+
   onSubmit() {
     if (this.formUser.valid) {
       if (navigator.onLine) {
